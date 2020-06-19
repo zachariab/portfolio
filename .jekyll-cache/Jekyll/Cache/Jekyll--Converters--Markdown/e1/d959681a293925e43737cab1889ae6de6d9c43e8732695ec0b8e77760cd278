@@ -1,0 +1,4 @@
+I"Ý<p>Macalesterâ€™s mobile site makes frequently accessed information about the college (like the campus directory and campus map) available in a mobile-optimized format.</p>
+
+<p>The site was developed using Kurogo, a PHP framework for turning data feeds into an integrated mobile site. The development phase of the project involved writing custom modules for Kurogo, developing JSON and XML data feeds for some content, and optimizing the front-end for iOS standalone mode.</p>
+:ET

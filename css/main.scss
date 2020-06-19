@@ -1,5 +1,8 @@
-@import "bourbon";
-@import "neat";
+---
+---
+
+@import "css/bourbon/bourbon";
+@import "css/neat/neat";
 
 
 .sr-only {
@@ -60,7 +63,7 @@ $hover-button-color: $hover-link-color;
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
-@import "normalize";
+@import "css/normalize";
 
 // TYPOGRAPHY
 
@@ -117,7 +120,7 @@ p {
 }
 
 a {
-  @include transition(color 0.1s linear);
+  transition: color 0.1s linear;
   color: $base-link-color;
   text-decoration: none;
 
@@ -269,7 +272,7 @@ section {
   opacity: .6;
   border: none;
   padding-left: 26px;
-  @include transition(opacity 0.1s linear);
+  transition: opacity 0.1s linear;
   vertical-align: top;
 }
 .contact a:hover span {
@@ -413,17 +416,17 @@ body.panel-open {
 @media only (min-width: 53em) {
   $max-width: em(700px);
   section {
-      @include outer-container;
+      @include grid-container;
     }
     .project-content {
-      @include outer-container;
-      @include row($direction: RTL);
+      @include grid-container;
+      //@include row($direction: RTL);
       .project-description {
-        @include span-columns(8);
+        //@include span-columns(8);
         margin-top: 1em;
       }
       .project-meta {
-        @include span-columns(4);
+        //@include span-columns(4);
       }
     }
 

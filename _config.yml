@@ -1,5 +1,5 @@
 name: Zach Bajaber
-markdown: redcarpet
+markdown: kramdown 
 highlighter: pygments # or rouge or null
 exclude: ["node_modules", "gulpfile.js", "package.json"]
 collections:
