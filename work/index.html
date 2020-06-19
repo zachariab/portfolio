@@ -1,0 +1,60 @@
+---
+layout: default
+title: Zach Bajaber | Web Developer
+---
+
+<div id="home">
+
+  <section id="projects">
+    <h1>Selected Work</h1>
+    <ul>
+      {% for project in site.projects %}
+        <li>
+          <!--<a href="{{ project.url }}">-->
+          <a href="#{{ project.id }}" data-open-panel="{{ project.id }}">
+              <h3 class="project-title">{{ project.title }}</h3>
+              <dl>
+                <dt>My role: </dt><dd>{{ project.role }}</dd>
+              </dl>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section id="summary">
+  {% markdown summary.md %}
+  </section>
+
+</div>
+
+<div class="project-details">
+    {% for project in site.projects %}
+    <div class="project" id="{{project.id}}">
+      <section class="post-details">
+      <div class="headgroup">
+      <div class="panel-close"><a href="#" data-close-panel>Close Project</a></div>
+      <h1>{{ project.title }}</h1>
+      </div>
+      <div class="project-content">
+        <div class="project-meta">
+        <p><strong>Role: </strong><span>{{project.role}}</span></p>
+        <p><strong>Technologies: </strong><span>{{project.technologies}}</span></p>
+        {% if project.link %}
+        <p><strong>Link: </strong><span><a href="{{project.link}}">{{project.link}}</a></span></p>
+        {% endif %}
+        </div>
+        <div class="project-description">
+        {{ project.content }}
+        </div>
+      </div>
+      </section>
+      <section class="feature-images">
+      {% for image in project.images %}
+        <img src="/work/images/{{image}}" alt="{{ project.title }} Sample" />
+      {% endfor %}
+      </section>
+      <div class="panel-close center"><a href="#" data-close-panel>Close Project</a></div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<section class="post-details">
+<div class="headgroup">
+<div class="section-label"><a href="/work/">Selected Work</a></div>
+<h1>{{ page.title }}</h1>
+</div>
+<div class="project-content">
+  <div class="project-meta">
+  <p><strong>Role: </strong><span>{{page.role}}</span></p>
+  <p><strong>Technologies: </strong><span>{{page.technologies}}</span></p>
+  {% if page.link %}
+  <p><strong>Link: </strong><span><a href="{{page.link}}">{{page.link}}</a></span></p>
+  {% endif %}
+  </div>
+  <div class="project-description">
+  {{ content }}
+  </div>
+</div>
+</section>
+<section class="feature-images">
+{% for image in page.images %}
+  <img src="/work/images/{{image}}" alt="{{ page.title }} Sample" />
+{% endfor %}
+</section>
